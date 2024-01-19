@@ -7,12 +7,6 @@ const CampoTexto = (argumento) => {
             <label>{argumento.label}</label>
             <input placeholder={argumento.placeholder}/>
         </div>
-
-
-
-
-
-        
     )
 
 }

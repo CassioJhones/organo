@@ -1,14 +1,12 @@
 .campo-texto{
 margin: 24px 5px;
 font-weight: bold;
-
 }
 
 .campo-texto label{
     display: block;
     margin-bottom: 8px;
     font-size: 24px;
-
 }
 
 .campo-texto input{
@@ -20,5 +18,4 @@ font-weight: bold;
     font-size: 24px;
     padding: 24px;
     box-sizing: border-box;
-
 }
