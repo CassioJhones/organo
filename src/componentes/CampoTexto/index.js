@@ -1,14 +1,11 @@
 import './CampoTexto.css'
 
-const CampoTexto = () => {
+const CampoTexto = (argumento) => {
+    
     return (
         <div className="campo-texto">
-            <label>Nome</label>
-            <input placeholder='Digite seu nome'/>
-            <label>Idade</label>
-            <input placeholder='Digite sua idade'/>
-            <label>Empresa</label>
-            <input placeholder='Digite sua empresa'/>
+            <label>{argumento.label}</label>
+            <input placeholder={argumento.placeholder}/>
         </div>
 
 
