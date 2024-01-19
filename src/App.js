@@ -7,7 +7,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          Altere o <code>src/App.js</code> e Salve para recarregar.
         </p>
         <a
           className="App-link"
@@ -23,3 +23,4 @@ function App() {
 }
 
 export default App;
+https://vscode.dev/tunnel/desktop-qo1pdki/c:/Users/cassi/Desktop/REACT/organo
