@@ -10,12 +10,18 @@ const Formulario = () => {
             'DataScience', 'Devops',
             'Mobile', 'Back-End']
 
+
+    const aoSalvar = (acao) => {
+        acao.preventDefault()
+        
+    }
+
     return (
 
         <section className='formulario'>
-            <form>
+            <form onSubmit={aoSalvar}>
                 <h2>Preencha os Dados corretamente para criar o card</h2>
-                <CampoTexto label="Nome" placeholder="Digite seu nome" />
+                <CampoTexto obrigatorio={true} label="Nome" placeholder="Digite seu nome" />
                 <CampoTexto label="Cargo" placeholder="Digite seu cargo" />
                 <CampoTexto label="Imagem" placeholder="Digite o endereço da sua imagem" />
                 <ListaSuspensa label="Time" itens={times} />
