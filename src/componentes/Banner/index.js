@@ -7,7 +7,6 @@ function Banner() {
 
             <img src="/imagens/banner.png" alt="banner topo" />
         </header>
-
     )
 
 }

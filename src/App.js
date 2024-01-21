@@ -6,9 +6,9 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario/>
-    </div>  
-  );
+      <Formulario />
+    </div>
+  )
 }
 
 export default App;

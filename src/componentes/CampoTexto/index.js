@@ -8,7 +8,6 @@ const CampoTexto = (argumento) => {
             <input placeholder={argumento.placeholder}/>
         </div>
     )
-
 }
 
 export default CampoTexto
