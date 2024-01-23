@@ -1,3 +1,9 @@
 {
-    "editor.cursorWidth": 2
+    "editor.cursorWidth": 2,
+    "editor.fontFamily": "JetBrains Mono Medium",
+    "files.autoSave": "afterDelay",
+    "editor.autoClosingBrackets": "always",
+    "editor.autoClosingComments": "always",
+    "editor.autoClosingQuotes": "always",
+    "editor.bracketPairColorization.independentColorPoolPerBracketType": true
 }
