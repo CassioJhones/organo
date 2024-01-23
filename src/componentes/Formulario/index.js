@@ -4,7 +4,7 @@ import CampoTexto from '../CampoTexto'
 import ListaSuspensa from '../ListaSuspensa'
 import './Formulario.css'
 
-const Formulario = () => {
+const Formulario = (props) => {
 
     const times =
         ['Programação', 'Front-End',
@@ -17,12 +17,16 @@ const Formulario = () => {
     const [imagem, setImagem] = useState('')
     const [time, setTime] = useState('')
 
-
-
     const aoSalvar = (acao) => {
-        //desativa o comportamento padrao do submit
+        //desativa o comportamento nativo do botao submit
         acao.preventDefault()
         console.log('SUBMETIDO =>', nome, cargo, imagem, time);
+        props.aoColaboradorCadastrado({
+            nome,
+            cargo,
+            imagem,
+            time
+        })
 
     }
 
@@ -30,6 +34,7 @@ const Formulario = () => {
 
         <section className='formulario'>
             <form onSubmit={aoSalvar}>
+
                 <h2>Preencha os Dados corretamente para criar o card</h2>
                 <CampoTexto obrigatorio={true} label="Nome" placeholder="Digite seu nome"
                     valor={nome} aoAlterado={valor => setNome(valor)} />
@@ -44,7 +49,6 @@ const Formulario = () => {
                     valor={time} aoAlterado={valor => setTime(valor)} />
 
                 <Botao >Criar Card</Botao>
-                <Botao>Cancelar</Botao>
 
             </form>
         </section>
