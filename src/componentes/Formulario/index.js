@@ -6,8 +6,6 @@ import './Formulario.css'
 
 const Formulario = (props) => {
 
-   
-
     const [nome, setNome] = useState('')
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
@@ -16,14 +14,12 @@ const Formulario = (props) => {
     const aoSalvar = (acao) => {
         //desativa o comportamento nativo do botao submit
         acao.preventDefault()
-        console.log('SUBMETIDO =>', nome, cargo, imagem, time);
-        props.aoColaboradorCadastrado({
-            nome,
-            cargo,
-            imagem,
-            time
-        })
-
+        props.aoColaboradorCadastrado({nome,cargo,imagem,time})
+        //apaga os valores digitados após submit
+        setNome('')
+        setCargo('')
+        setImagem('')
+        setTime('')
     }
 
     return (
@@ -45,10 +41,8 @@ const Formulario = (props) => {
                     valor={time} aoAlterado={valor => setTime(valor)} />
 
                 <Botao >Criar Card</Botao>
-
             </form>
         </section>
     )
 }
-
 export default Formulario

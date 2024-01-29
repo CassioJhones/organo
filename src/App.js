@@ -7,7 +7,7 @@ import Time from "./componentes/Time";
 function App() {
 
   const times = [
-      
+
     {
       nome: 'Programação', corPrimaria: '#57c278', corSecundaria: '#d9f7e9'
     },
@@ -45,13 +45,20 @@ function App() {
 
     <div className="App">
       <Banner />
-      <Formulario times={times.map(time => time.nomeTime)} aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
+      <Formulario
+        times={times.map(time => time.nomeTime)}
+        aoColaboradorCadastrado={colaborador => aoNovoColaboradorAdicionado(colaborador)} />
 
-      {times.map(time =>
-      <Time key={time.nome} nomeTime={time.nome} corPrimaria={time.corPrimaria} corSecundaria={time.corSecundaria} />)}
+      {times.map(time => <Time
+        key={time.nome}
+        nomeTime={time.nome}
+        corPrimaria={time.corPrimaria}
+        corSecundaria={time.corSecundaria}
+        colaboradores={colaboradores.filter(colaborador=>colaborador.time===time.nomeTime)}
+      />)}
 
     </div>
-  )
+  );
 }
 
 export default App;
